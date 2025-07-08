@@ -8,6 +8,8 @@ import HUD from "./components/HUD";
 import SoundManager from "./components/SoundManager";
 import Home from "./pages/Home";
 import "@fontsource/inter";
+import Soldier from "Soldier";
+
 
 
 // Define control keys for the FPS game
