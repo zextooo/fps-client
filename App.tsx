@@ -9,6 +9,7 @@ import SoundManager from "./components/SoundManager";
 import Home from "./pages/Home";
 import "@fontsource/inter";
 
+
 // Define control keys for the FPS game
 enum Controls {
   forward = 'forward',
@@ -87,12 +88,14 @@ function App() {
             gl.domElement.style.cursor = 'crosshair';
           }}
         >
-          <color attach="background" args={["#87CEEB"]} />
-          
-          <Suspense fallback={null}>
-            <Game />
-          </Suspense>
-        </Canvas>
+          <ambientLight intensity={1} />
+<directionalLight position={[5, 10, 5]} intensity={1.5} castShadow />
+
+<Suspense fallback={null}>
+  <Soldier />
+  <Game />
+</Suspense>
+
         
         <HUD />
         <SoundManager />
